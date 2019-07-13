@@ -1,12 +1,16 @@
+import cargo.CargoTicketScreen;
+
 public class ScreenManager
 {
     MainScreen mainScreen = new MainScreen();
+    SelectTicketScreen selectTicketScreen = new SelectTicketScreen();
     TicketScreen ticketScreen = new TicketScreen();
     HumaneTicketScreen humaneTicket = new HumaneTicketScreen();
     CarTicketScreen carTicketScreen = new CarTicketScreen();
     MotoBikeScreen motoBikeScreen = new MotoBikeScreen();
     TruckTicketScreen truckTicketScreen = new TruckTicketScreen();
     BusTicketScreen busTicketScreen = new BusTicketScreen();
+    CargoTicketScreen cargoTicketScreen = new CargoTicketScreen();
 
     int chosenScreen;
 
@@ -27,7 +31,7 @@ public class ScreenManager
         }
         if (chosenScreen == 1) // tickets menu
         {
-            return ticketScreen.interact();
+            return selectTicketScreen.interact();
         }
         if (chosenScreen == 2) // humane ticket
         {
@@ -48,6 +52,10 @@ public class ScreenManager
         if (chosenScreen == 6) // moto bike ticket
         {
             return busTicketScreen.interact();
+        }
+        if (chosenScreen == 7) // cargo ticket
+        {
+            return cargoTicketScreen.interact();
         }
         return mainScreen.interact();
     }

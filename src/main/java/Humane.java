@@ -1,16 +1,15 @@
-public class People
+public class Humane
 {
     private int age;
     private String name;
     private String surname;
     private int price;
 
-    public People(int age, String name, String surname, int price)
+    public Humane(int age, String name, String surname)
     {
         this.age = age;
         this.name = name;
         this.surname = surname;
-        this.price = price;
     }
 
     public int getAge() {

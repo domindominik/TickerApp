@@ -12,26 +12,9 @@ public class HumaneTicketScreen implements Screen
         System.out.println("Enter your age: ");
         int age = scanner.nextInt();
 
-        People people = new People(age, name, surname, price(age));
-        System.out.println("Your ticket cost: " + people.getPrice());
-
+        Humane humane = new Humane(age, name, surname);
+        Ticket ticket = new HumaneTicket(humane);
+        System.out.println("Your ticket cost: " + ticket.getPrice());
         return 0;
-    }
-
-    public int price (int age)
-    {
-        if (age < 3)
-        {
-            return 0;
-        }
-        if (age < 18)
-        {
-            return 5;
-        }
-        if (age < 70)
-        {
-            return 10;
-        }
-        return 5;
     }
 }
