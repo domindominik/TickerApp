@@ -1,6 +1,5 @@
 public class BusTicket extends Ticket
 {
-    private int length;
     private Bus bus;
 
     public BusTicket(Bus bus)

@@ -1,20 +1,14 @@
-public class MotoBikeTicket extends Vehicle
+public class MotoBikeTicket extends Ticket
 {
-    private int price;
+    private MotoBike motoBike;
 
-    public MotoBikeTicket()
+    public MotoBikeTicket(MotoBike motoBike)
     {
-        this.price = 10;
+        this.motoBike = motoBike;
     }
 
     public int getPrice()
     {
-        return price;
-    }
-
-    public int interact()
-    {
-        System.out.println("Your ticket cost: " + getPrice());
-        return 0;
+        return 10;
     }
 }

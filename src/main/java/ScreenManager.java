@@ -3,8 +3,8 @@ public class ScreenManager
     MainScreen mainScreen = new MainScreen();
     TicketScreen ticketScreen = new TicketScreen();
     HumaneTicketScreen humaneTicket = new HumaneTicketScreen();
-    CarTicket carTicket = new CarTicket();
-    MotoBikeTicket motoBikeTicket = new MotoBikeTicket();
+    CarTicketScreen carTicketScreen = new CarTicketScreen();
+    MotoBikeScreen motoBikeScreen = new MotoBikeScreen();
     TruckTicketScreen truckTicketScreen = new TruckTicketScreen();
     BusTicketScreen busTicketScreen = new BusTicketScreen();
 
@@ -35,11 +35,11 @@ public class ScreenManager
         }
         if (chosenScreen == 3) // car ticket
         {
-            return carTicket.interact();
+            return carTicketScreen.interact();
         }
         if (chosenScreen == 4) // moto bike ticket
         {
-            return motoBikeTicket.interact();
+            return motoBikeScreen.interact();
         }
         if (chosenScreen == 5) // truck ticket
         {

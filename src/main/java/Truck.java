@@ -6,4 +6,9 @@ public class Truck extends Vehicle
     {
         this.weight = weight;
     }
+
+    public int getWeight()
+    {
+        return weight;
+    }
 }

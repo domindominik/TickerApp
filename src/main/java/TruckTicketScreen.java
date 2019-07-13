@@ -1,15 +1,15 @@
 import java.util.Scanner;
 
-public class TruckTicketScreen
+public class TruckTicketScreen implements Screen
 {
     public int interact()
     {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your weight in T");
         int weight = scanner.nextInt();
-        Vehicle vehicle = new Vehicle();
-        vehicle.setLength(weight);
-        System.out.println("Your ticket cost: " + vehicle.getPrice());
+        Truck truck = new Truck(weight);
+        Ticket ticket = new TruckTicket(truck);
+        System.out.println("Your truck ticket cost: " + ticket.getPrice());
         return 0;
     }
 }

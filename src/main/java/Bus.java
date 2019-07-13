@@ -6,4 +6,14 @@ public class Bus extends Vehicle
     {
         this.length = length;
     }
+
+    public int getLength()
+    {
+        return length;
+    }
+
+    public void setLength(int length)
+    {
+        this.length = length;
+    }
 }
