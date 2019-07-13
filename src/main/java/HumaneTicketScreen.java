@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PeopleTicket
+public class HumaneTicketScreen implements Screen
 {
     public int interact()
     {

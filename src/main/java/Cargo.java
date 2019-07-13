@@ -1,4 +1,4 @@
-public class Commodity
+public class Cargo
 {
     private int weight;
     private int capacity;

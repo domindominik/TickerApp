@@ -5,7 +5,7 @@ public class MainScreen implements Screen
     public int interact()
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("1. Tickets, 2. Setting, 10. Exit");
+        System.out.println("1. Tickets, 2. Setting, 10. Exit"); // main menu
         int selection = scanner.nextInt();
 
         switch (selection)
