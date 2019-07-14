@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class CargoTicketScreen implements Screen
 {
-
     public int interact()
     {
         Scanner scanner = new Scanner(System.in);
