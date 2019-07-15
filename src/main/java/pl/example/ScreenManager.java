@@ -9,18 +9,16 @@ public class ScreenManager
     MainScreen mainScreen = new MainScreen();
     SelectTicketScreen selectTicketScreen = new SelectTicketScreen();
     TicketScreen ticketScreen = new TicketScreen();
-    CarTicketScreen carTicketScreen = new CarTicketScreen();
-    MotorBikeScreen motorBikeScreen = new MotorBikeScreen();
-    TruckTicketScreen truckTicketScreen = new TruckTicketScreen();
-    BusTicketScreen busTicketScreen = new BusTicketScreen();
 
     Ship ship = new Ship("titanic");
     SoldTicketScreen soldTicketScreen = new SoldTicketScreen(ship);
     HumaneTicketScreen humaneTicket = new HumaneTicketScreen(ship);
     ShipStatusScreen shipStatusScreen = new ShipStatusScreen(ship);
     CargoTicketScreen cargoTicketScreen = new CargoTicketScreen(ship);
-
-
+    CarTicketScreen carTicketScreen = new CarTicketScreen(ship);
+    MotorBikeScreen motorBikeScreen = new MotorBikeScreen(ship);
+    TruckTicketScreen truckTicketScreen = new TruckTicketScreen(ship);
+    BusTicketScreen busTicketScreen = new BusTicketScreen(ship);
 
     int chosenScreen;
 

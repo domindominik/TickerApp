@@ -92,4 +92,9 @@ public class Ship
         busList.add(bus);
     }
 
+    public void addMotorBike(MotorBike motorBike)
+    {
+        motorBikeList.add(motorBike);
+    }
+
 }

@@ -1,17 +1,32 @@
 package pl.example;
 
+import pl.example.ship.Ship;
+
 import java.util.Scanner;
 
 public class BusTicketScreen implements Screen
 {
+    private Ship ship;
+
+    public BusTicketScreen(Ship ship)
+    {
+        this.ship = ship;
+    }
+
     public int interact()
     {
         Scanner scanner = new Scanner(System.in);
         int length = scanner.nextInt();
         System.out.println("Enter your bus length");
-        Bus bus = new Bus(length);
-        Ticket ticket = new BusTicket(bus);
-        System.out.println("Your bus ticket cost: " + ticket.getPrice());
+        if (ship.getSpace() >= 50)
+        {
+            Bus bus = new Bus(length);
+            Ticket ticket = new BusTicket(bus);
+            ship.setSpace(ship.getSpace() - 50);
+            ship.addBus(bus);
+            System.out.println("Your bus ticket cost: " + ticket.getPrice());
+        }
+
         return 0;
     }
 }
