@@ -11,11 +11,11 @@ public class Ship
     private String name;
     private int space;
     private List<Humane> humaneList = new ArrayList<Humane>();
-    private List<Car> carList;
-    private List<MotoBike> motoBikeList;
-    private List<Truck> truckList;
-    private List<Bus> busList;
-    private List<Cargo> cargoList;
+    private List<Car> carList = new ArrayList<Car>();
+    private List<MotorBike> motorBikeList = new ArrayList<MotorBike>();
+    private List<Truck> truckList = new ArrayList<Truck>();
+    private List<Bus> busList = new ArrayList<Bus>();
+    private List<Cargo> cargoList = new ArrayList<Cargo>();
 
     public Ship(String name)
     {
@@ -23,17 +23,19 @@ public class Ship
         this.space = 1000;
         this.humaneList = humaneList;
         this.carList = carList;
-        this.motoBikeList = motoBikeList;
+        this.motorBikeList = motorBikeList;
         this.truckList = truckList;
         this.busList = busList;
         this.cargoList = cargoList;
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
-    public int getSpace() {
+    public int getSpace()
+    {
         return space;
     }
 
@@ -45,8 +47,8 @@ public class Ship
         return carList;
     }
 
-    public List<MotoBike> getMotoBikeList() {
-        return motoBikeList;
+    public List<MotorBike> getMotorBikeList() {
+        return motorBikeList;
     }
 
     public List<Truck> getTruckList() {
@@ -75,4 +77,19 @@ public class Ship
     {
         this.space = space;
     }
+    public void addCargo(Cargo cargo)
+    {
+        cargoList.add(cargo);
+    }
+
+    public void addTruck(Truck truck)
+    {
+        truckList.add(truck);
+    }
+
+    public void addBus(Bus bus)
+    {
+        busList.add(bus);
+    }
+
 }

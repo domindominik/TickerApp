@@ -23,9 +23,11 @@ public class CargoTicketScreen implements Screen
 
         if (ship.getSpace() >= volume * 5)
         {
-            ship.setSpace(ship.getSpace() - 5);
+            ship.setSpace(ship.getSpace() - (volume * 5));
             Cargo cargo = new Cargo(volume);
             Ticket ticket = new CargoTicket(cargo);
+            cargo.setPrice(ticket.getPrice());
+            ship.addCargo(cargo);
             System.out.println("Your cargo ticket cost: " + ticket.getPrice());
         }
         else

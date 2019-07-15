@@ -15,4 +15,17 @@ public class Cargo
     {
         return volume;
     }
+
+    public int getPrice()
+    {
+        return price;
+    }
+
+    public void setVolume(int volume) {
+        this.volume = volume;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
 }

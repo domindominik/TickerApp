@@ -10,15 +10,16 @@ public class ScreenManager
     SelectTicketScreen selectTicketScreen = new SelectTicketScreen();
     TicketScreen ticketScreen = new TicketScreen();
     CarTicketScreen carTicketScreen = new CarTicketScreen();
-    MotoBikeScreen motoBikeScreen = new MotoBikeScreen();
+    MotorBikeScreen motorBikeScreen = new MotorBikeScreen();
     TruckTicketScreen truckTicketScreen = new TruckTicketScreen();
     BusTicketScreen busTicketScreen = new BusTicketScreen();
-    CargoTicketScreen cargoTicketScreen = new CargoTicketScreen();
 
     Ship ship = new Ship("titanic");
     SoldTicketScreen soldTicketScreen = new SoldTicketScreen(ship);
     HumaneTicketScreen humaneTicket = new HumaneTicketScreen(ship);
     ShipStatusScreen shipStatusScreen = new ShipStatusScreen(ship);
+    CargoTicketScreen cargoTicketScreen = new CargoTicketScreen(ship);
+
 
 
     int chosenScreen;
@@ -56,7 +57,7 @@ public class ScreenManager
         }
         if (chosenScreen == 5) // truck ticket
         {
-            return motoBikeScreen.interact();
+            return motorBikeScreen.interact();
         }
         if (chosenScreen == 6) // moto bike ticket
         {
