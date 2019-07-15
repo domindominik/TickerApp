@@ -1,6 +1,8 @@
 package pl.example.cargo;
 
-public class CargoTicket
+import pl.example.Ticket;
+
+public class CargoTicket extends Ticket
 {
     private Cargo cargo;
 

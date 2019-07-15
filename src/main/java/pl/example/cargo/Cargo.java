@@ -2,18 +2,13 @@ package pl.example.cargo;
 
 public class Cargo
 {
-    private int weight;
     private int volume;
+    private int price;
 
-    public Cargo(int weight, int volume)
+    public Cargo(int volume)
     {
-        this.weight = weight;
         this.volume = volume;
-    }
-
-    public int getWeight()
-    {
-        return weight;
+        this.price = 0;
     }
 
     public int getVolume()

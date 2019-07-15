@@ -1,20 +1,38 @@
 package pl.example.cargo;
 
 import pl.example.Screen;
+import pl.example.Ticket;
+import pl.example.ship.Ship;
 
 import java.util.Scanner;
 
 public class CargoTicketScreen implements Screen
 {
+    private Ship ship;
+
+    public CargoTicketScreen(Ship ship)
+    {
+        this.ship = ship;
+    }
+
     public int interact()
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter pl.example.cargo weight: ");
-        int weight = scanner.nextInt();
-        System.out.println("Enter pl.example.cargo volume");
+        System.out.println("Enter cargo volume");
         int volume = scanner.nextInt();
-        Cargo cargo = new Cargo(weight, volume);
-        //pl.example.Ticket ticket = new CargoTicket(pl.example.cargo);
+
+        if (ship.getSpace() >= volume * 5)
+        {
+            ship.setSpace(ship.getSpace() - 5);
+            Cargo cargo = new Cargo(volume);
+            Ticket ticket = new CargoTicket(cargo);
+            System.out.println("Your cargo ticket cost: " + ticket.getPrice());
+        }
+        else
+        {
+            System.out.println("Not enough space");
+        }
+
         return 0;
     }
 }
