@@ -7,7 +7,7 @@ public class MainScreen implements Screen
     public int interact()
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("1. Tickets, 2. Setting, 3. Cargo, 4. Sold tickets, 5. Ship status, 6. Save object to file, 7. Load from file, 10. Exit"); // main menu
+        System.out.println("1. Tickets, 2. Setting, 3. Cargo, 4. Sold tickets, 5. Ship status, 6. Save object to file, 7. Load from file, 8. Find human, 10. Exit"); // main menu
         int selection = scanner.nextInt();
 
         switch (selection)
@@ -32,6 +32,9 @@ public class MainScreen implements Screen
 
             case 7:
                 return 12;
+
+            case 8:
+                return 13;
         }
         return 0;
     }

@@ -4,6 +4,7 @@ import pl.example.cargo.CargoTicketScreen;
 import pl.example.file.LoadFromFileScreen;
 import pl.example.file.SaveToFile;
 import pl.example.file.SaveToFileScreen;
+import pl.example.finder.FindHumanScreen;
 import pl.example.ship.Ship;
 import pl.example.ship.ShipStatusScreen;
 
@@ -24,6 +25,7 @@ public class ScreenManager
     BusTicketScreen busTicketScreen = new BusTicketScreen(ship);
     SaveToFileScreen saveToFileScreen = new SaveToFileScreen(ship);
     LoadFromFileScreen loadFromFileScreen = new LoadFromFileScreen(ship);
+    FindHumanScreen findHumanScreen = new FindHumanScreen(ship);
 
     int chosenScreen;
 
@@ -82,13 +84,17 @@ public class ScreenManager
         {
             return shipStatusScreen.interact();
         }
-        if (chosenScreen == 11) //
+        if (chosenScreen == 11) // save to file
         {
             return saveToFileScreen.interact();
         }
-        if (chosenScreen == 12)
+        if (chosenScreen == 12) // load file
         {
             return loadFromFileScreen.interact();
+        }
+        if (chosenScreen == 13) // find human
+        {
+            return findHumanScreen.interact();
         }
         //TODO
         // save to file

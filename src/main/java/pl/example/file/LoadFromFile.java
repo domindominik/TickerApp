@@ -17,11 +17,11 @@ public class LoadFromFile
 
     public void loadFromFile()
     {
-        try (FileInputStream fileInputStream = new FileInputStream(new File("ships.dat")))
+        try (FileInputStream fileInputStream = new FileInputStream(new File("/home/dominik/TickerApp/ships.dat")))
         {
             try (ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream))
             {
-                 Object ship = objectInputStream.readObject();
+                 ship = (Ship) objectInputStream.readObject();
             }
         }
         catch (Exception e)
