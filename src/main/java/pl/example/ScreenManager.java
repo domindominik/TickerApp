@@ -1,6 +1,7 @@
 package pl.example;
 
 import pl.example.cargo.CargoTicketScreen;
+import pl.example.file.LoadFromFileScreen;
 import pl.example.file.SaveToFile;
 import pl.example.file.SaveToFileScreen;
 import pl.example.ship.Ship;
@@ -22,6 +23,7 @@ public class ScreenManager
     TruckTicketScreen truckTicketScreen = new TruckTicketScreen(ship);
     BusTicketScreen busTicketScreen = new BusTicketScreen(ship);
     SaveToFileScreen saveToFileScreen = new SaveToFileScreen(ship);
+    LoadFromFileScreen loadFromFileScreen = new LoadFromFileScreen(ship);
 
     int chosenScreen;
 
@@ -44,15 +46,15 @@ public class ScreenManager
         {
             return selectTicketScreen.interact();
         }
-        if (chosenScreen == 2) // humane ticket
+        if (chosenScreen == 2) // menu ticket
         {
             return humaneTicket.interact();
         }
-        if (chosenScreen == 3) // car ticket
+        if (chosenScreen == 3) // human ticket
         {
             return ticketScreen.interact();
         }
-        if (chosenScreen == 4) // moto bike ticket
+        if (chosenScreen == 4) // car ticket
         {
             return carTicketScreen.interact();
         }
@@ -60,7 +62,7 @@ public class ScreenManager
         {
             return motorBikeScreen.interact();
         }
-        if (chosenScreen == 6) // moto bike ticket
+        if (chosenScreen == 6) // motor bike ticket
         {
             return truckTicketScreen.interact();
         }
@@ -68,7 +70,7 @@ public class ScreenManager
         {
             return busTicketScreen.interact();
         }
-        if (chosenScreen == 8)  // pl.example.cargo ticket
+        if (chosenScreen == 8)  // cargo ticket
         {
             return cargoTicketScreen.interact();
         }
@@ -80,9 +82,13 @@ public class ScreenManager
         {
             return shipStatusScreen.interact();
         }
-        if (chosenScreen == 11)
+        if (chosenScreen == 11) //
         {
             return saveToFileScreen.interact();
+        }
+        if (chosenScreen == 12)
+        {
+            return loadFromFileScreen.interact();
         }
         //TODO
         // save to file

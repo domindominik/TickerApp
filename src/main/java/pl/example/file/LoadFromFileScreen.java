@@ -3,19 +3,19 @@ package pl.example.file;
 import pl.example.Screen;
 import pl.example.ship.Ship;
 
-public class SaveToFileScreen implements Screen
+public class LoadFromFileScreen implements Screen
 {
     private Ship ship;
 
-    public SaveToFileScreen(Ship ship)
+    public LoadFromFileScreen(Ship ship)
     {
         this.ship = ship;
     }
 
     public int interact()
     {
-        SaveToFile saveToFile = new SaveToFile(ship);
-        saveToFile.saveToFile();
+        LoadFromFile loadFromFile = new LoadFromFile(ship);
+        loadFromFile.loadFromFile();
         System.out.println("ok");
         return 0;
     }
