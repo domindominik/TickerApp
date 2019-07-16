@@ -1,6 +1,8 @@
 package pl.example;
 
 import pl.example.cargo.CargoTicketScreen;
+import pl.example.file.SaveToFile;
+import pl.example.file.SaveToFileScreen;
 import pl.example.ship.Ship;
 import pl.example.ship.ShipStatusScreen;
 
@@ -19,6 +21,7 @@ public class ScreenManager
     MotorBikeScreen motorBikeScreen = new MotorBikeScreen(ship);
     TruckTicketScreen truckTicketScreen = new TruckTicketScreen(ship);
     BusTicketScreen busTicketScreen = new BusTicketScreen(ship);
+    SaveToFileScreen saveToFileScreen = new SaveToFileScreen(ship);
 
     int chosenScreen;
 
@@ -76,6 +79,10 @@ public class ScreenManager
         if (chosenScreen == 10)  // ship information
         {
             return shipStatusScreen.interact();
+        }
+        if (chosenScreen == 11)
+        {
+            return saveToFileScreen.interact();
         }
         //TODO
         // save to file
