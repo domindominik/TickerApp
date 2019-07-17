@@ -17,7 +17,7 @@ public class SaveToFile
 
     public void saveToFile()
     {
-        try (FileOutputStream fileOutputStream = new FileOutputStream(new File("ship.txt")))
+        try (FileOutputStream fileOutputStream = new FileOutputStream(new File("ship.dat")))
         {
             try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream))
             {

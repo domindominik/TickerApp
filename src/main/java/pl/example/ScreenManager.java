@@ -1,6 +1,7 @@
 package pl.example;
 
 import pl.example.cargo.CargoTicketScreen;
+import pl.example.cruise.CruiseScreen;
 import pl.example.file.LoadFromFileScreen;
 import pl.example.file.SaveToFile;
 import pl.example.file.SaveToFileScreen;
@@ -26,6 +27,7 @@ public class ScreenManager
     SaveToFileScreen saveToFileScreen = new SaveToFileScreen(ship);
     LoadFromFileScreen loadFromFileScreen = new LoadFromFileScreen(ship);
     FindHumanScreen findHumanScreen = new FindHumanScreen(ship);
+    //CruiseScreen cruiseScreen = new CruiseScreen();
 
     int chosenScreen;
 

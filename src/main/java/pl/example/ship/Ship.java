@@ -3,10 +3,11 @@ package pl.example.ship;
 import pl.example.*;
 import pl.example.cargo.Cargo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Ship
+public class Ship implements Serializable
 {
     private String name;
     private int space;
