@@ -13,7 +13,13 @@ public class ShipStatusScreen implements Screen
 
     public int interact()
     {
-        System.out.println("quantity of humane tickets sold: " + ship.getHumaneList().size() +
+        System.out.println("Ship's name: " + ship.getName() +
+                "\nQuantity of humane tickets sold: " + ship.getHumaneList().size() +
+                "\nQuantity of car tickets sold: " + ship.getCarList().size() +
+                "\nQuantity of motor bike tickets sold: " + ship.getMotorBikeList().size() +
+                "\nQuantity of truck tickets sold: " + ship.getTruckList().size() +
+                "\nQuantity of bus tickets sold: " + ship.getBusList().size() +
+                "\nQuantity of cargo tickets sold: " + ship.getCargoList().size() +
                 "\nFree space: " + ship.getSpace());
         return 0;
     }

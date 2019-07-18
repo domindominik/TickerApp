@@ -30,6 +30,8 @@ public class Ship implements Serializable
         this.cargoList = cargoList;
     }
 
+
+
     public String getName()
     {
         return name;
@@ -78,6 +80,7 @@ public class Ship implements Serializable
     {
         this.space = space;
     }
+
     public void addCargo(Cargo cargo)
     {
         cargoList.add(cargo);

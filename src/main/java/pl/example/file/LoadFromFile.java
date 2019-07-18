@@ -17,7 +17,7 @@ public class LoadFromFile
 
     public void loadFromFile()
     {
-        try (FileInputStream fileInputStream = new FileInputStream(new File("/home/dominik/TickerApp/ships.dat")))
+        try (FileInputStream fileInputStream = new FileInputStream(new File("/home/dominik/TickerApp/ship.dat")))
         {
             try (ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream))
             {
