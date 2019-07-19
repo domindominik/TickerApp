@@ -44,7 +44,8 @@ public class Ship implements Serializable
         return space;
     }
 
-    public List<Humane> getHumaneList() {
+    public List<Humane> getHumaneList()
+    {
         return humaneList;
     }
 

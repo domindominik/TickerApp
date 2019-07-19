@@ -6,6 +6,7 @@ public class Humane
     private String name;
     private String surname;
     private int price;
+    private int spaceUnit;
 
     public Humane(int age, String name, String surname)
     {
