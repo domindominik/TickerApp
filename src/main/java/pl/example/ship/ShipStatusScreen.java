@@ -20,7 +20,8 @@ public class ShipStatusScreen implements Screen
                 "\nQuantity of truck tickets sold: " + ship.getTruckList().size() +
                 "\nQuantity of bus tickets sold: " + ship.getBusList().size() +
                 "\nQuantity of cargo tickets sold: " + ship.getCargoList().size() +
-                "\nFree space: " + ship.getSpace());
+                "\nFree space: " + ship.getSpace() +
+                "\nFree space for car: " + ship.quantityCar());
         return 0;
     }
 

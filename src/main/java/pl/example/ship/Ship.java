@@ -17,6 +17,7 @@ public class Ship implements Serializable
     private List<Truck> truckList = new ArrayList<Truck>();
     private List<Bus> busList = new ArrayList<Bus>();
     private List<Cargo> cargoList = new ArrayList<Cargo>();
+    private Car car = new Car();
 
     public Ship(String name)
     {
@@ -28,6 +29,7 @@ public class Ship implements Serializable
         this.truckList = truckList;
         this.busList = busList;
         this.cargoList = cargoList;
+        this.car = car;
     }
 
 
@@ -101,4 +103,9 @@ public class Ship implements Serializable
         motorBikeList.add(motorBike);
     }
 
+    public int quantityCar()
+    {
+        return space / car.getSpaceUnit();
+        //return space / carList.get(0).getSpaceUnit();
+    }
 }
