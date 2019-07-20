@@ -1,12 +1,14 @@
 package pl.example;
 
-public class Car extends Vehicle
+import java.io.Serializable;
+
+public class Car extends Vehicle implements Serializable
 {
-    private int spaceUnit;
+    public static final int spaceUnit= 30;
 
     public Car()
     {
-        this.spaceUnit = 30;
+
     }
 
     public int getSpaceUnit()

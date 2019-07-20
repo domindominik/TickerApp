@@ -6,4 +6,5 @@ public abstract class Vehicle
     /*public abstract Humane getDriver();
     public abstract void setDriver();
     */
+    //dodać pola kierowca
 }
