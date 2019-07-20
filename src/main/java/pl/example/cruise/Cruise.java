@@ -2,7 +2,9 @@ package pl.example.cruise;
 
 import pl.example.ship.Ship;
 
-public class Cruise
+import java.io.Serializable;
+
+public class Cruise implements Serializable
 {
     private Ship ship;
     private String destination;

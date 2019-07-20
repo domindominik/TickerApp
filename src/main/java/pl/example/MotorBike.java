@@ -1,6 +1,8 @@
 package pl.example;
 
-public class MotorBike extends  Vehicle
+import java.io.Serializable;
+
+public class MotorBike extends  Vehicle implements Serializable
 {
     public MotorBike()
     {

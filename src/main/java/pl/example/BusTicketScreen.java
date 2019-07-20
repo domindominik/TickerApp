@@ -18,11 +18,11 @@ public class BusTicketScreen implements Screen
         Scanner scanner = new Scanner(System.in);
         int length = scanner.nextInt();
         System.out.println("Enter your bus length");
-        if (ship.getSpace() >= 50)
+        if (ship.getSpace() >= Bus.spaceUnit)
         {
             Bus bus = new Bus(length);
             Ticket ticket = new BusTicket(bus);
-            ship.setSpace(ship.getSpace() - 50);
+            ship.setSpace(ship.getSpace() - Bus.spaceUnit);
             ship.addBus(bus);
             System.out.println("Your bus ticket cost: " + ticket.getPrice());
         }

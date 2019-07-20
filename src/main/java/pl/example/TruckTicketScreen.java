@@ -19,11 +19,11 @@ public class TruckTicketScreen implements Screen
         System.out.println("Enter your weight in T");
         int weight = scanner.nextInt();
 
-        if (ship.getSpace() >= 50)
+        if (ship.getSpace() >= Truck.spaceUnit)
         {
             Truck truck = new Truck(weight);
             Ticket ticket = new TruckTicket(truck);
-            ship.setSpace(ship.getSpace() - 50);
+            ship.setSpace(ship.getSpace() - Truck.spaceUnit);
             ship.addTruck(truck);
             System.out.println("Your truck ticket cost: " + ticket.getPrice());
         }

@@ -4,10 +4,11 @@ import java.io.Serializable;
 
 public class Car extends Vehicle implements Serializable
 {
-    public static final int spaceUnit= 30;
+    public static final int spaceUnit = 30;
 
     public Car()
     {
+        super();
 
     }
 

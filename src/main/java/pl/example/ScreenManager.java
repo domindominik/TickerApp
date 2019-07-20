@@ -1,6 +1,7 @@
 package pl.example;
 
 import pl.example.cargo.CargoTicketScreen;
+import pl.example.cruise.Cruise;
 import pl.example.cruise.CruiseScreen;
 import pl.example.file.LoadFromFileScreen;
 import pl.example.file.SaveToFile;
@@ -8,6 +9,9 @@ import pl.example.file.SaveToFileScreen;
 import pl.example.finder.FindHumanScreen;
 import pl.example.ship.Ship;
 import pl.example.ship.ShipStatusScreen;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ScreenManager
 {
@@ -28,6 +32,7 @@ public class ScreenManager
     LoadFromFileScreen loadFromFileScreen = new LoadFromFileScreen(ship);
     FindHumanScreen findHumanScreen = new FindHumanScreen(ship);
     //CruiseScreen cruiseScreen = new CruiseScreen();
+    List<Cruise> cruiseList = new ArrayList<>();
 
     int chosenScreen;
 

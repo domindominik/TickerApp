@@ -1,12 +1,15 @@
 package pl.example;
 
-public class Humane
+import java.io.Serializable;
+
+public class Humane implements Serializable
 {
     private int age;
     private String name;
     private String surname;
     private int price;
-    private int spaceUnit;
+    public static final int spaceUnit = 10;
+
 
     public Humane(int age, String name, String surname)
     {
