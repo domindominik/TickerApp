@@ -15,9 +15,9 @@ public class LoadFromFile
         this.ship = ship;
     }
 
-    public void loadFromFile()
+    public Ship loadFromFile()
     {
-        try (FileInputStream fileInputStream = new FileInputStream(new File("/home/dominik/sda/TickerApp/ship.dat")))
+        try (FileInputStream fileInputStream = new FileInputStream(new File("ship.dat")))
         {
             try (ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream))
             {
@@ -28,5 +28,6 @@ public class LoadFromFile
         {
             System.out.println(e.getMessage());
         }
+        return ship;
     }
 }

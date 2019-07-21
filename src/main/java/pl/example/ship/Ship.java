@@ -109,5 +109,20 @@ public class Ship implements Serializable
         //return space / carList.get(0).getSpaceUnit();
     }
 
+    public int quantityMotorBike()
+    {
+        return space / MotorBike.getSpaceUnit();
+    }
+
+    public int quantityBus()
+    {
+        return space / Bus.spaceUnit;
+    }
+
+    public int quantityTruck()
+    {
+        return space / Truck.spaceUnit;
+    }
+
     //
 }
