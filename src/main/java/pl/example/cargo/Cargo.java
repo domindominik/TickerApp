@@ -1,6 +1,8 @@
 package pl.example.cargo;
 
-public class Cargo
+import java.io.Serializable;
+
+public class Cargo implements Serializable
 {
     private int volume;
     private int price;
