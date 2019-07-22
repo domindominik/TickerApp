@@ -8,7 +8,7 @@ public class MotorBike extends  Vehicle implements Serializable
 
     public MotorBike()
     {
-
+        super();
     }
 
     public static int getSpaceUnit()

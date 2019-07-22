@@ -35,6 +35,9 @@ public class MainScreen implements Screen
 
             case 8:
                 return 13;
+
+            case 9:
+                return 14;
         }
         return 0;
     }

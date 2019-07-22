@@ -31,8 +31,8 @@ public class ScreenManager
     SaveToFileScreen saveToFileScreen = new SaveToFileScreen(ship);
     LoadFromFileScreen loadFromFileScreen = new LoadFromFileScreen(ship);
     FindHumanScreen findHumanScreen = new FindHumanScreen(ship);
-    //CruiseScreen cruiseScreen = new CruiseScreen();
-    List<Cruise> cruiseList = new ArrayList<>();
+    CruiseScreen cruiseScreen = new CruiseScreen();
+    private static List<Cruise> cruiseList = new ArrayList<>();
 
     int chosenScreen;
 
@@ -103,10 +103,19 @@ public class ScreenManager
         {
             return findHumanScreen.interact();
         }
+        if (chosenScreen == 14) // add new cruise
         //TODO
         // save to file
         // load from file
         // find human
         return mainScreen.interact();
+        {
+            return cruiseScreen.interact();
+        }
+    }
+
+    public static void addCruise(Cruise cruise)
+    {
+        cruiseList.add(cruise);
     }
 }

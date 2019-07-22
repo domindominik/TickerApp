@@ -1,5 +1,7 @@
 package pl.example.ship;
 
+import pl.example.Car;
+import pl.example.Humane;
 import pl.example.Screen;
 
 public class ShipStatusScreen implements Screen
@@ -25,6 +27,14 @@ public class ShipStatusScreen implements Screen
                 "\nFree space for motor: " + ship.quantityMotorBike() +
                 "\nFree space for truck: " + ship.quantityTruck() +
                 "\nFree space for bus: " + ship.quantityBus());
+
+        for (Car car: ship.getCarList())
+        {
+            for (Humane humane: car.getPassengerList())
+            {
+                System.out.println(humane.toString());
+            }
+        }
         return 0;
     }
 }

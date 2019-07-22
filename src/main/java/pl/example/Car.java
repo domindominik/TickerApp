@@ -1,6 +1,7 @@
 package pl.example;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Car extends Vehicle implements Serializable
 {
@@ -9,7 +10,6 @@ public class Car extends Vehicle implements Serializable
     public Car()
     {
         super();
-
     }
 
     public int getSpaceUnit()
