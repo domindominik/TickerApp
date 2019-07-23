@@ -45,6 +45,11 @@ public class ScreenManager
         }
     }
 
+    public static List<Cruise> getCruiseList()
+    {
+        return cruiseList;
+    }
+
     private int chosenScreen(int chosenScreen)
     {
         if (chosenScreen == 0)
@@ -104,10 +109,7 @@ public class ScreenManager
             return findHumanScreen.interact();
         }
         if (chosenScreen == 14) // add new cruise
-        //TODO
-        // save to file
-        // load from file
-        // find human
+
         return mainScreen.interact();
         {
             return cruiseScreen.interact();
@@ -118,4 +120,6 @@ public class ScreenManager
     {
         cruiseList.add(cruise);
     }
+
+
 }

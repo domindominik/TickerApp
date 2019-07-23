@@ -20,7 +20,7 @@ public class FindHumanScreen implements Screen
         System.out.println("Enter name or surname the human: ");
         String name = scanner.next();
         FindHuman findHuman = new FindHuman(ship);
-        findHuman.findHuman(name);
+        findHuman.findHuman2(name);
         return 0;
     }
 }

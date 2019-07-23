@@ -1,7 +1,6 @@
 package pl.example;
 
 import java.io.Serializable;
-import java.util.List;
 
 public class Car extends Vehicle implements Serializable
 {
@@ -12,7 +11,7 @@ public class Car extends Vehicle implements Serializable
         super();
     }
 
-    public int getSpaceUnit()
+    public int getSpaceUnit() // czy mogę tę metodę przenieść do klasy Vehicle?
     {
         return spaceUnit;
     }

@@ -6,6 +6,8 @@ public class Cargo implements Serializable
 {
     private int volume;
     private int price;
+    public static final int spaceUnit = 5;
+
 
     public Cargo(int volume)
     {

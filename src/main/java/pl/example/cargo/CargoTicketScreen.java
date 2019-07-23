@@ -21,9 +21,9 @@ public class CargoTicketScreen implements Screen
         System.out.println("Enter cargo volume");
         int volume = scanner.nextInt();
 
-        if (ship.getSpace() >= volume * 5)
+        if (ship.getSpace() >= volume * Cargo.spaceUnit)
         {
-            ship.setSpace(ship.getSpace() - (volume * 5));
+            ship.setSpace(ship.getSpace() - (volume * Cargo.spaceUnit));
             Cargo cargo = new Cargo(volume);
             Ticket ticket = new CargoTicket(cargo);
             cargo.setPrice(ticket.getPrice());

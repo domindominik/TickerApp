@@ -15,7 +15,7 @@ public class CarTicketScreen implements Screen
 
     public int interact()
     {
-        if (ship.getSpace() >= Car.spaceUnit)
+        if (ship.getSpace() >= Car.spaceUnit) //TODO dodanie samochodu na listę rejsów?
         {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Enter your name: ");
